@@ -1,0 +1,9 @@
+
+
+.pTag{
+   cursor: pointer;
+   font-weight: 700;
+}
+.pTag:hover{
+  background-color: #f2f2f2;
+}

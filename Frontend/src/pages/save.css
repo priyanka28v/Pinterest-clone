@@ -1,0 +1,50 @@
+.save-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(212, 241, 241);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start ;
+  padding-left: 32px;
+  padding-bottom: 160px;
+  padding-top: 180px;
+}
+.save-container h1{
+  font-weight: 700;
+  font-size: 60px;
+  color: rgb(8, 114, 118);
+  margin-left: 20px;
+  line-height: 5rem;
+  }
+
+  .save-container p {
+  font-size: 25px;
+  color: rgb(8, 114, 118);
+  margin: 0;
+  max-width: 420px;
+  text-align: center;
+  margin-left: 60px;
+  word-spacing: -2px;
+  line-height: 1.9rem;
+}
+
+.save-container button {
+  color: white;
+  font-weight: 600;
+  background-color: rgb(227, 42, 42);
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;         /* ⬅️ Add space from paragraph */
+  margin-left: 220px;       /* align with paragraph */
+  cursor: pointer;
+  text-align: center;
+}
+
+

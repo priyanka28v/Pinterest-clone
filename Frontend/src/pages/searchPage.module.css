@@ -1,0 +1,107 @@
+.searchBody {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(246, 246, 151);
+  position: relative;
+
+}
+
+.images {
+  position: relative;
+  width: 45%;
+  height: 400px;
+  cursor: pointer;
+}
+
+.s1 {
+  position: absolute;
+  top: 12%;
+  right: 70%;
+  width: 200px;
+  height: 280px;
+  border-radius: 44px;
+  object-fit: cover;
+}
+.s4{
+  width: 30%;
+  height: 200px;
+  margin-bottom: 30px;
+  border-radius: 60px;
+  position: absolute;  
+  right: 100px;
+  bottom: 63%;
+} 
+ .s2{
+  width: 50%;
+  height: 450px;
+  margin-bottom: 30px;
+  position: absolute;  
+  border-radius: 20%;
+  left: 20%;
+}
+
+ .s3{
+  width: 30%;
+  height: 250px;
+  margin-bottom: 30px;
+  position: absolute;  
+  top:60%;
+  left: 55%;
+  border-radius: 25%;
+} 
+.imgButton {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+ background-color:whitesmoke;
+ opacity: 0.9;
+  color: #722f37; /* Wine shade (deep maroon) in hex */
+  border:  solid; /* Optional: add border for visibility */
+  border-radius: 490px;
+  width: 60%;
+  padding: 27px 10px;
+  font-weight: 700;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.searchBody h1 {
+  font-weight: 700;
+  font-size: 60px;
+  color: rgb(207, 37, 85);
+  margin: 0;
+  margin-left: 90px;
+  line-height: 2.4rem;
+}
+
+.searchBody p {
+  font-size: 25px;
+  color:  rgb(207, 37, 85);
+  margin: 0;
+  max-width: 420px;
+  text-align: center;
+ margin-left: 140px;
+  word-spacing: -2px;
+  line-height: 1.9rem;
+}
+
+.exploreButton {
+  color: white;
+  font-weight: 600;
+  background-color: rgb(227, 42, 42);
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;         /* ⬅️ Add space from paragraph */
+  margin-left: 270px;      /* align with paragraph */
+  cursor: pointer;
+  text-align: center;
+}
+

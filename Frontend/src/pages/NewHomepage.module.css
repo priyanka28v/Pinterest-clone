@@ -1,0 +1,72 @@
+.fullpage{
+  height: 100vh;
+  position:fixed;
+}
+
+.searchBar {
+  position: relative; /* 👈 required so masonryGrid can be positioned inside it */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.masonryGrid {
+  position: absolute;  
+  top: 80px;            
+  left: 82px;        
+  right: 20px;
+  display: flex;
+  width: auto;
+}
+
+.masonryColumn {
+  padding-left: 15px;
+  background-clip: padding-box;
+}
+
+.pinCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.pinImage {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.hoverCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* dark transparent layer */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.saveButton {
+  background-color: #e60023;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hoverCard button:hover {
+  background-color: #b3001b;
+}
+
+

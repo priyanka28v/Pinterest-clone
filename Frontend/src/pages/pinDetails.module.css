@@ -1,0 +1,142 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.main {
+  position: absolute;
+  top: 80px; /* ✅ Using only top */
+  left: 90px;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.card {
+  width: 500px;
+  height: auto; /* ✅ Height will grow with content */
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.shareModal {
+  position: absolute;
+  top: 40px;
+  left: 0;  
+  z-index: 100;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 150px;
+}
+.actions{
+  position:absolute;
+   top: 40px;
+  left: 0;  
+  z-index: 100;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+.hoverEffect {
+  cursor: pointer;
+  height: 35px;
+  width: 30px;
+}
+
+.hoverEffect:hover {
+  background-color: #f2f2f2;
+  height: 35px;
+  width: 30px;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.card button {
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  background-color: red;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pinImage {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.pTag {
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #555;
+}
+
+.hr {
+  height: 2px;
+  margin: 10px 0 0;
+  width: 100%;
+  background-color: #ccc;
+  border: none;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.sendIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ce0505;
+  cursor: pointer;
+}
+
+.commentsList {
+  padding-top: 10px;
+  margin-top: 8px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.commentItem {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+}

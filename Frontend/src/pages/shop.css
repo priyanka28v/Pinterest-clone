@@ -1,0 +1,73 @@
+.shop-body {
+  display: flex;
+  flex-direction: row;         /* Arrange image and content side by side */
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(244, 204, 220);
+  /* padding: 0 120px; */
+  box-sizing: border-box;
+}
+
+.shop-body img {
+  height: 499px;               /* You can adjust as needed */
+    margin-top: 40px;
+  cursor: pointer;
+  width: 650px;
+  
+
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   align-items: center;  
+   text-align: right;
+  max-width: 700px;
+  padding-right: 50px;
+   padding-bottom: 40px;  
+  padding-top: 80px; 
+    height: 100vh;
+width:100%;
+margin-left: 90px;
+
+}
+
+.content-wrapper h1 {
+  font-weight: 700;
+  font-size: 60px;
+  color: rgb(189, 38, 51);
+  margin: 0;
+  /* line-height: 9rem;  */
+  text-align: center;
+  margin-right: 50px;
+   line-height: 4.5rem;
+}
+
+.content-wrapper p {
+  font-size: 25px;
+  color: rgb(189, 38, 51);
+  margin-right: 60px;
+  /* margin: 20px 0; */
+   margin: 20px 20px 0 0; 
+ max-width: 420px;
+  text-align: center;
+   word-spacing: -2px;
+    line-height: 1.7rem;
+}
+
+.content-wrapper button {
+  color: white;
+  font-weight: 600;
+  background-color: rgb(227, 42, 42);
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 25px;
+  
+}

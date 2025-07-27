@@ -1,0 +1,107 @@
+.bt{
+  background-color: rgb(227, 27, 27);
+   width: 250px !important;
+  font-size: 18px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.heading{
+  text-align: center;
+  margin-top: -5%;
+}
+
+.fp{
+  color: rgb(19, 93, 179);
+   font-size: 3px;  
+}
+input {
+  width: 250px ;
+  height: 66px ;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.form {
+  width: 300px;
+  margin-left: 60px;   
+  margin-right: 100px; 
+ 
+}
+.or{
+  margin-left: 115px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  }
+  .facebook{
+    width: 250px !important;
+  font-size: 18px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  }
+  .google{
+    width: 250px !important;
+  font-size: 28px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  }
+  .footer{
+  font-size: 12px;  
+  color: #6c757d;    
+  padding-right: 38px;
+  text-align: center;
+}
+.last{
+  font-size: 12px;  
+  color: #000001;    
+  padding-right: 38px;
+  text-align: center;
+}
+.mod-fot{
+  font-size: 12px;  
+  padding-left: 3px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+.mod-body{
+  margin-left: 10px;
+  padding-left: 30px;
+}
+.mod-head {
+  margin-left: 10px;
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.mod .modal-content {
+  border-radius: 40px !important;
+  overflow: hidden; 
+}
+
+.hover-highlight {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.hover-highlight:hover {
+  background-color: beige
+}
+ .overlay-over-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.826); /* blackish background */
+  z-index: 1049;                         /* just below react-bootstrap modal */
+}
+
+
+
+
