@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+//signupuser
+
 export const SignupUser = async (req, res) => {
   try {
     const { email, password, birthdate } = req.body;
@@ -27,6 +29,8 @@ export const SignupUser = async (req, res) => {
     res.json({ message: "error created" });
   }
 };
+
+//loginuser
 
 export const loginUser = async (req, res) => {
   try {
@@ -53,5 +57,38 @@ export const loginUser = async (req, res) => {
     // Response ke saath token bhi frontend ko bhej diya jaata hai.
   } catch (err) {
     console.log(err);
+  }
+};
+
+// savedPins
+export const savePin = async (req, res) => {
+  const { id: pinId } = req.params;
+  const userId = req.user.id; // from middleware
+
+  try {
+    const existingUser = await user.findById(userId);
+
+    if (!existingUser)
+      return res.status(404).json({ message: "User not found" });
+
+    if (!existingUser.savedPins) {
+      existingUser.savedPins = [];
+    }
+
+    const alreadySaved = existingUser.savedPins.includes(pinId);
+    console.log(alreadySaved);
+
+    if (alreadySaved) {
+      existingUser.savedPins.pull(pinId);
+      await existingUser.save();
+      return res.json({ message: "Pin is unsaved", isSaved: false });
+    } else {
+      existingUser.savedPins.push(pinId);
+      await existingUser.save();
+      return res.json({ message: "Pin is saved", isSaved: true });
+    }
+  } catch (err) {
+    console.log("savePin error ", err);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };

@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
   password: String,
   savedPins:[{
     type:mongoose.Schema.Types.ObjectId,
-    ref:"Pins"
+    ref:"Pins",
+    default:[]
   }]
 });
 
