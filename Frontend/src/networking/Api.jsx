@@ -31,6 +31,10 @@ export function Api({ email, password, birthdate, type, formData,id }) {
     method="PUT";
     payload = formData
   }
+  else if(type=="savePin"){
+    url=`http://localhost:5000/savePin/${id}`
+    method="POST"
+  }
 
   const headers =
     method === "GET"
