@@ -115,7 +115,7 @@ export const comments = async (req, res) => {
 
     // Populate user email in comments
     await pin.populate("comments.user", "email");
-    console.log("✅ Populated Comments:", pin.comments);
+    console.log(" Populated Comments:", pin.comments);
 
     const commentsCount = pin.comments.length;
 
@@ -125,7 +125,7 @@ export const comments = async (req, res) => {
       commentsCount,
     });
   } catch (err) {
-    console.log("❌ Error saving comment:", err);
+    console.log(" Error saving comment:", err);
     res.status(500).json({ message: "Internal server error" });
   }
 };

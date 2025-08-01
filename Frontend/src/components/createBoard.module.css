@@ -1,0 +1,40 @@
+.heading{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+.input{
+width: 100%;
+border-radius: 20px;
+border-width: 1px;
+margin-bottom: 20px;
+}
+.subText1{
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.subText2{
+  margin-left: 10px;
+}
+.disabled{
+  border: black;
+  width: 20%;
+  padding:10px;
+  color:black;
+  background-color: rgb(230, 228, 225);
+}
+.error{
+  color: red;
+  margin-bottom: 23px;
+  line-height: 0.1em;
+  margin-left: 20px;
+}
+.create{
+  background-color: red;
+  border: black;
+  width: 20%;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+}

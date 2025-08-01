@@ -35,6 +35,7 @@ export function PinDetails() {
 
   const [savepin, setSavePin] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
+  const [isSaved,setIsSaved]=useState(false)
 
   // to get pindetails
   useEffect(() => {
@@ -45,6 +46,7 @@ export function PinDetails() {
       setLikesCount(response.pin.likes.length);
       setCommentsCount(response.pin.comments.length);
       setIsLiked(response.isLiked);
+      setIsSaved(response.isSaved)
     };
     fetchPinDetails();
   }, [id]);
@@ -97,10 +99,12 @@ export function PinDetails() {
       console.log(response);
       if (response.isSaved) {
         setSavePin(true);
+        setIsSaved(true)
         setSaveMessage("Saved successfully");
       } else {
         setSavePin(false);
         setSaveMessage("Pin Unsave");
+        setIsSaved(false)
       }
     } catch (err) {
       console.log(err);

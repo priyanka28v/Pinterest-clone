@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
     type:mongoose.Schema.Types.ObjectId,
     ref:"Pins",
     default:[]
+  }],
+  boards:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"Board"
   }]
 });
 

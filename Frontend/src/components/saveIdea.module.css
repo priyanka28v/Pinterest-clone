@@ -1,0 +1,23 @@
+.container{
+  width:200px;
+  margin-left: 1080px;
+  margin-bottom: 1050px;
+  margin-top: 65px;
+}
+.pin{
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.pin:hover{
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  
+}
+.board{
+  padding-bottom: 10px; 
+  cursor: pointer;
+}
+.board:hover{
+  background-color: #e0e0e0;
+border-radius: 10px;
+}

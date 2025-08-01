@@ -107,7 +107,7 @@ export function ShareModal({ pinId }) {
         </div>
         <hr
           style={{
-            width: "500px",
+            width: "400px",
             height: "1px",
             backgroundColor: "black",
             border: "none",

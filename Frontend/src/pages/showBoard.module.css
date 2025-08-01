@@ -1,0 +1,44 @@
+.heading {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading h1 {
+  margin-right: auto; /* title left side me rahe, baaki icons right me */
+}
+
+.shareWrapper {
+  position: relative; /* absolute positioning ka base */
+  display: inline-block;
+}
+
+.shareIcon {
+  margin: 0; /* remove manual 900px margin */
+  padding: 5px;
+}
+
+.threeDotsIcon {
+  margin: 0;
+  padding: 5px;
+}
+
+.shareIcon:hover,
+.threeDotsIcon:hover {
+  cursor: pointer;
+  background-color: #f2efef;
+  border-radius: 10px;
+}
+
+.shareFunc {
+  position: absolute;
+  top: 45px; /* icon ke neeche gap */
+  left: 0; /* icon ke left se align */
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1000;
+}

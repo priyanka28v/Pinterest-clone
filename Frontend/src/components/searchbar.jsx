@@ -28,7 +28,7 @@ export function Searchbar() {
 
   return (
     <div
-      style={{ background: "white", height: "100vh" }}
+      style={{ background: "white", height: "100vh",position:"fixed"}}
       className="d-flex justify-content-start align-items-start"
     >
       <div className="d-flex flex-column justify-content-start align-items-start">
@@ -82,7 +82,7 @@ export function Searchbar() {
           <TbLayoutBoardSplit
             size={32}
             style={{ marginTop: "38px", marginLeft: "20px", cursor: "pointer" }}
-             onClick={() => navigate("/Boards")}
+             onClick={() => navigate("/pins")}
           />
         </OverlayTrigger>
 
@@ -136,20 +136,10 @@ export function Searchbar() {
           marginRight: "0px", // reduced spacing
         }}
       ></div>
-      <div className="flex-grow-1" style={{ paddingRight: "0px" }}>
-        <Navbar style={{ marginLeft: "30px", marginTop: "10px" }}>
+      <div className="flex-grow-1" style={{ paddingRight: "0px",position:"fixed",marginLeft:"60px",zIndex:9999 }}>
+        <Navbar style={{ marginLeft: "30px", marginTop: "9px" }}>
           <Form className="position-relative">
             {/* Search icon inside input */}
-            <CiSearch
-              size={22}
-              style={{
-                position: "absolute",
-                left: "10px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                color: "#666",
-              }}
-            />
 
             {/* Search input */}
             <Form.Control
@@ -162,16 +152,28 @@ export function Searchbar() {
               aria-label="Search"
               style={{
                 width: "1100px",
-                height: "35px",
+                height: "40px",
                 fontSize: "14px",
                 background: "#f2f2f2",
+                position:"fixed",
+                borderRadius:"10px"
               }}
             />
+              <CiSearch
+                size={25}
+                style={{
+                  position: "fixed",
+                  left: "100px",
+                  top: "6%",
+                  transform: "translateY(-50%)",
+                  color: "#666",
+                }}
+              />
           </Form>
           <div>
             <CiCircleChevDown
               size={30}
-              style={{ marginLeft: "20px", cursor: "pointer" }}
+              style={{ position:"absolute", marginLeft: "1120px",marginTop:"4px", cursor: "pointer" }}
               onClick={user}
             />
             {/* {currentUser && <CurrentUser />} */}

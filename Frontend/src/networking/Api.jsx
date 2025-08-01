@@ -1,4 +1,4 @@
-export function Api({ email, password, birthdate, type, formData,id }) {
+export function Api({ email, password, birthdate, type, formData,id,boardName }) {
   let url = "";
   let payload = {};
   let isFormData = false;
@@ -35,6 +35,19 @@ export function Api({ email, password, birthdate, type, formData,id }) {
     url=`http://localhost:5000/savePin/${id}`
     method="POST"
   }
+  else if(type=="pins"){
+    url=`http://localhost:5000/pins/${id}`
+    method="GET"
+  }
+  else if(type=="boards"){
+    url=`http://localhost:5000/boards`
+    method="POST"
+    payload={ boardName }
+  }
+  else if(type=="getBoard"){
+    url=`http://localhost:5000/getBoards`
+    method="GET"
+  }
 
   const headers =
     method === "GET"
@@ -46,7 +59,7 @@ export function Api({ email, password, birthdate, type, formData,id }) {
   return fetch(url, {
     method,
     headers,
-    credentials: "include", 
+    credentials: "include",  // important for  send cookies
     body: method === "GET" ? undefined : isFormData ? payload : JSON.stringify(payload),
   })
     .then((response) => {

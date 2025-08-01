@@ -1,4 +1,5 @@
 import user from "../models/users.js";
+import pin from "../models/createPins.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
@@ -61,6 +62,7 @@ export const loginUser = async (req, res) => {
 };
 
 // savedPins
+
 export const savePin = async (req, res) => {
   const { id: pinId } = req.params;
   const userId = req.user.id; // from middleware
@@ -90,5 +92,40 @@ export const savePin = async (req, res) => {
   } catch (err) {
     console.log("savePin error ", err);
     res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+//pins
+
+export const pins = async (req, res) => {
+  const userId = req.user.id;
+  // console.log(userId)
+  try {
+    const exitingUser = await user.findById(userId).populate("savedPins"); //Ab yeh string hai, Mongoose samjhega ki field ka naam hai
+    if (!exitingUser) {
+      res.status(200).json({ message: "user not found" });
+    }
+    const createdPins = await pin.find({ createdBy: userId });
+    res.status(200).json({
+      savedPins: exitingUser.savedPins || [],
+      createdPins: createdPins || [],
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+//boards
+export const getBoards = async (req, res) => {
+  const userId = req.user.id;
+  try {
+    const existingUser = await user.findById(userId).populate("boards");
+    if (!existingUser) {
+      res.status(200).json({ message: "user not found" });
+    }
+    res.status(200).json({ boards: existingUser.boards || [] });
+    console.log(existingUser)
+  } catch (err) {
+    console.log(err);
   }
 };

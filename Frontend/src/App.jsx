@@ -16,7 +16,11 @@ import { CreatePin } from "./pages/createPin";
 import { Explore } from "./pages/Explore";
 import { PinDetails } from "./pages/pinDetails";
 import { Actions } from "./components/moreActions";
-import { Boards } from "./pages/boards";
+import { Pins } from "./pages/pins";
+import { SaveIdea } from "./components/saveIdeaModal";
+import {Boards} from "./pages/board";
+import {CreateBoard} from './components/createBoard'
+import { ShowBoard } from "./pages/showBoard";
 
 const App = () => {
   const location = useLocation();
@@ -41,7 +45,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/PinDetails/:id" element={<PinDetails />} />
+        <Route path='/Pins' element={<Pins/>}/>
         <Route path='/Boards' element={<Boards/>}/>
+        <Route path="/ShowBoard/:boardName" element={<ShowBoard/>}/>
       </Routes>
     </>
   );

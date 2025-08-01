@@ -8,12 +8,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 export function NewHomePage() {
-  const [authUser,setAuthUser] =useState(null)
+  const [authUser, setAuthUser] = useState(null);
   const [showPins, setShowPins] = useState([]);
   const [loader, setLoader] = useState(true);
   const [hoverId, setHoverId] = useState(null);
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPins = async () => {
@@ -43,9 +43,10 @@ export function NewHomePage() {
     <>
       <div className={styles.fullPage}>
         <Searchbar />
-        <div className={styles.SearchBar}></div>
         {loader ? (
-          <HashLoader color="#e60023" size={50} />
+          <div className={styles.loader}>
+            <HashLoader color="#e60023" size={50} />
+          </div>
         ) : (
           <Masonry
             breakpointCols={breakpointColumnsObj}
@@ -62,7 +63,7 @@ export function NewHomePage() {
                 onMouseLeave={() => {
                   setHoverId(null);
                 }}
-                onClick={()=>navigate(`/PinDetails/${pin._id}`)}
+                onClick={() => navigate(`/PinDetails/${pin._id}`)}
               >
                 <img
                   src={`http://localhost:5000/${pin.images.replace(
@@ -76,7 +77,9 @@ export function NewHomePage() {
                   <div className={styles.hoverCard}>
                     {pin.link && (
                       <a href={pin.link}>
-                        <button className={styles.visitButton}>Visit Link</button>
+                        <button className={styles.visitButton}>
+                          Visit Link
+                        </button>
                       </a>
                     )}
                     <button className={styles.saveButton}>Save</button>
